@@ -1,0 +1,10 @@
+@startuml
+
+create Amende
+Smartphone -> Amende: saisie
+Smartphone -> Commissariat
+activate Commissariat
+
+deactivate Commissariat
+
+@enduml

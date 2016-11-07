@@ -1,0 +1,15 @@
+@startuml
+":Test" -> ":Accueil": fournitInfos(nom,prenom)
+activate ":Accueil"
+create Dossier
+":Accueil" -> Dossier :
+
+":Accueil" -> ":Medecin": consulter(unDossier)
+activate ":Medecin"
+":Medecin" --> ":Accueil":
+deactivate ":Medecin"
+":Accueil" --> ":Test": transmissiondossier()
+deactivate ":Accueil"
+
+
+@enduml
